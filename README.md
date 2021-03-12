@@ -1,3 +1,3 @@
 # vega-smart-assistant
-Установить библиотеки: pip3 install -r requirements.txt
-Запуск бота из app.py
+# Установить библиотеки: pip3 install -r requirements.txt \n
+# Запуск бота из app.py
