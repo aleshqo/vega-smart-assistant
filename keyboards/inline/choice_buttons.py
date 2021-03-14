@@ -60,3 +60,62 @@ earn_on_an_affiliate_program_btn = InlineKeyboardButton(text="«Заработа
 want_to_know_more_detail.insert(safely_safeguard_your_funds_btn)
 want_to_know_more_detail.insert(increase_rate_growth_btn)
 want_to_know_more_detail.insert(earn_on_an_affiliate_program_btn)
+
+# клавиатура приумножить средства
+increase_rate_growth_keyboard = InlineKeyboardMarkup(row_width=1)
+increase_rate_growth_keyboard.insert(increase_rate_growth_btn)
+
+# клавиатура заработать на партнерской программе
+earn_on_an_affiliate_program_keyboard = InlineKeyboardMarkup(row_width=1)
+earn_on_an_affiliate_program_keyboard.insert(earn_on_an_affiliate_program_btn)
+
+# список кнопок конца первой части (партнерская программа или вернуться в главное меню)
+end_of_first_section_keyboard = InlineKeyboardMarkup(row_width=1)
+partner_program = InlineKeyboardButton(text="Партнерская программа🤝",
+                                       callback_data=menu_callBack.new(button_name="partner_program_btn"))
+
+back_to_main_menu_from_first = InlineKeyboardButton(text="Вернуться в главное меню ▶",
+                                                    callback_data=menu_callBack.new(
+                                                        button_name="back_to_main_menu_from_first"))
+
+end_of_first_section_keyboard.insert(partner_program)
+end_of_first_section_keyboard.insert(back_to_main_menu_from_first)
+
+# клавиатура "Комиссии, Условия и Тарифы ✍"
+commissions_and_taxes_keyboard = InlineKeyboardMarkup(row_width=1)
+commissions_and_taxes_keyboard.insert(commissions_and_taxes_btn)
+
+terms_and_commission_keyboard = InlineKeyboardMarkup(row_width=1)
+commissions_btn = InlineKeyboardButton(text="Комиссии ✍",
+                                       callback_data=menu_callBack.new(button_name="commissions_btn"))
+
+terms_btn = InlineKeyboardButton(text="Условия и Тарифы ✍",
+                                 callback_data=menu_callBack.new(button_name="terms_btn"))
+
+terms_and_commission_keyboard.insert(commissions_btn)
+terms_and_commission_keyboard.insert(terms_btn)
+
+terms_keyboard = InlineKeyboardMarkup(row_width=1)
+terms_keyboard.insert(terms_btn)
+
+tariffs_keyboard = InlineKeyboardMarkup(row_width=1)
+tariffs_btn = InlineKeyboardButton(text="Тарифы ✍",
+                                   callback_data=menu_callBack.new(button_name="tariffs_btn"))
+tariffs_keyboard.insert(tariffs_btn)
+
+# список кнопок конца второй части (Презентация 📣 или вернуться в главное меню)
+end_of_second_section_keyboard = InlineKeyboardMarkup(row_width=1)
+
+back_to_main_menu_from_second = InlineKeyboardButton(text="Вернуться в главное меню ▶",
+                                                     callback_data=menu_callBack.new(
+                                                         button_name="back_to_main_menu_from_first"))
+
+end_of_second_section_keyboard.insert(presentation_btn)
+end_of_second_section_keyboard.insert(back_to_main_menu_from_second)
+
+# конец третей части
+end_of_third_section_keyboard = InlineKeyboardMarkup(row_width=1)
+back_to_main_menu_from_second = InlineKeyboardButton(text="Вернуться в главное меню ▶",
+                                                     callback_data=menu_callBack.new(
+                                                         button_name="back_to_main_menu_from_first"))
+end_of_third_section_keyboard.insert(back_to_main_menu_from_second)
